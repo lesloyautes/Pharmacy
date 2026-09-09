@@ -1,14 +1,13 @@
 import streamlit as st
-import streamlit.components.v1 as components
 
-st.set_page_config(page_title="COSMAX Pharmacy", layout="wide")
-
-st.markdown("""<style>
-header, footer {display:none !important;}
-.block-container {padding:0 !important; max-width:100% !important;}
-div[data-testid="stAppViewContainer"] {overflow:hidden;}
-iframe {height:100vh !important; width:100% !important; display:block;}
-</style>""", unsafe_allow_html=True)
-
-with open("index.html", encoding="utf-8") as f:
-    components.html(f.read(), height=800, scrolling=False)
+st.set_page_config(page_title="COSMAX Pharmacy", layout="centered")
+st.markdown("""
+<div style="text-align:center; margin-top:28vh; font-family:sans-serif">
+  <h2>COSMAX 약국덱 · 전략마케팅 5조</h2>
+  <a href="/app/static/index.html" target="_self"
+     style="display:inline-block; margin-top:16px; padding:14px 32px; border-radius:99px;
+            background:#D6336C; color:#fff; font-weight:700; text-decoration:none">
+    약국으로 입장하기 →
+  </a>
+</div>
+""", unsafe_allow_html=True)
